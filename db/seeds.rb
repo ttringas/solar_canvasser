@@ -5,3 +5,18 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Lead.destroy_all
+Opportunity.destroy_all
+
+(1..10).each do |i|
+  l = Lead.new
+  l.name = "Fake Guy #{i}"
+  l.save!
+end
+
+(1..10).each do |i|
+  l = Opportunity.new
+  l.name = "Fake Guy #{i}"
+  l.save!
+end
